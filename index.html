@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4eee4" />
+  <meta name="description" content="E-Portfolio ของนายวิชญะ ถาวรผล นักเรียนชั้นมัธยมศึกษาปีที่ 6 โรงเรียนธัญรัตน์" />
+  <title>E-Portfolio | วิชญะ ถาวรผล</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f4eee4;
+      --paper: #fffdf9;
+      --sand: #e8dccb;
+      --taupe: #b9a58e;
+      --brown: #76583f;
+      --deep: #38291f;
+      --muted: #827365;
+      --line: rgba(91, 66, 45, .14);
+      --shadow: 0 18px 55px rgba(67, 47, 31, .10);
+      --serif: Georgia, 'Times New Roman', serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; color: var(--deep); background: var(--cream); font-family: 'Prompt', sans-serif; font-weight: 300; line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .topline { height: 5px; background: linear-gradient(90deg, #6d5039, #b99d7c, #e3d2bb); }
+    .nav-wrap { position: sticky; top: 0; z-index: 20; background: rgba(255,253,249,.88); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+    nav { max-width: 1160px; margin: auto; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { font-family: var(--serif); font-size: 22px; letter-spacing: .08em; font-weight: bold; color: var(--brown); white-space: nowrap; }
+    .brand small { display: block; font: 9px 'Prompt', sans-serif; letter-spacing: .22em; color: var(--muted); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 27px; font-size: 13px; color: #665342; }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: #ad8057; }
+    .nav-links .contact-link { padding: 9px 17px; border: 1px solid #9b7b5c; border-radius: 3px; }
+    .menu-btn { display: none; border: 1px solid var(--line); background: transparent; color: var(--deep); border-radius: 4px; padding: 6px 11px; }
+    .hero { max-width: 1160px; margin: auto; padding: 82px 28px 76px; display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: 55px; min-height: 590px; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--brown); letter-spacing: .2em; font-size: 11px; text-transform: uppercase; }
+    .eyebrow:before { content: ''; width: 38px; height: 1px; background: var(--taupe); }
+    h1 { font-size: clamp(38px, 5.5vw, 68px); line-height: 1.25; letter-spacing: -.04em; font-weight: 500; margin: 20px 0 12px; }
+    h1 span { display: block; font-family: var(--serif); font-weight: 400; font-style: italic; color: var(--brown); letter-spacing: -.02em; }
+    .hero-desc { max-width: 550px; color: var(--muted); font-size: 15px; margin: 20px 0 30px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 9px; padding: 12px 21px; border: 1px solid var(--brown); border-radius: 3px; font-size: 13px; transition: .2s; cursor: pointer; }
+    .btn.primary { color: #fffaf2; background: var(--brown); }
+    .btn.primary:hover { background: var(--deep); }
+    .btn.ghost { color: var(--brown); background: transparent; }
+    .btn.ghost:hover { background: #ebe0d2; }
+    .hero-art { position: relative; min-height: 390px; display: grid; place-items: center; }
+    .portrait-frame { position: relative; width: min(100%, 390px); height: 420px; background: linear-gradient(145deg, #dfd0bd, #f9f4eb 52%, #c8b49a); padding: 13px; box-shadow: var(--shadow); transform: rotate(2deg); }
+    .portrait-inner { width: 100%; height: 100%; border: 1px solid rgba(100,72,48,.25); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 25px; background: radial-gradient(circle at 50% 35%, rgba(255,255,255,.8), transparent 55%), linear-gradient(145deg, #e9dfd1, #cbb79e); color: var(--brown); }
+    .portrait-inner .monogram { font: 96px/.95 var(--serif); opacity: .78; }
+    .portrait-inner .portrait-label { margin-top: 20px; font-size: 10px; letter-spacing: .28em; text-transform: uppercase; }
+    .portrait-inner .portrait-name { font: italic 24px var(--serif); margin-top: 8px; }
+    .seal { position: absolute; right: -18px; bottom: 25px; width: 112px; height: 112px; border: 1px solid #a98c6d; border-radius: 50%; display: grid; place-items: center; text-align: center; color: var(--brown); background: var(--cream); font-size: 9px; letter-spacing: .12em; line-height: 1.5; transform: rotate(-12deg); }
+    .side-note { position: absolute; left: -22px; top: 40px; writing-mode: vertical-rl; font: 11px var(--serif); letter-spacing: .25em; color: #9a8269; }
+    .section { padding: 88px 28px; }
+    .section.white { background: var(--paper); }
+    .container { max-width: 1100px; margin: auto; }
+    .section-head { margin-bottom: 42px; }
+    .section-kicker { color: #9b7b5c; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; }
+    h2 { margin: 8px 0 10px; font-size: clamp(28px, 4vw, 42px); line-height: 1.35; font-weight: 500; }
+    h2 span { font: italic 400 1.05em var(--serif); color: var(--brown); }
+    .section-intro { max-width: 650px; color: var(--muted); font-size: 14px; }
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 65px; align-items: start; }
+    .about-card { padding: 30px; background: var(--cream); border: 1px solid var(--line); position: relative; }
+    .about-card:before { content: '“'; position: absolute; right: 22px; top: 0; font: 80px var(--serif); color: #c7b49d; }
+    .about-card h3 { font-size: 18px; font-weight: 500; margin: 0 0 12px; }
+    .about-card p { font-size: 13px; color: var(--muted); }
+    .profile-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 25px; margin-top: 22px; }
+    .profile-item { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .profile-item small { display: block; color: #9a8065; font-size: 10px; letter-spacing: .12em; }
+    .profile-item strong { font-size: 13px; font-weight: 400; }
+    .skills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .skill { padding: 6px 12px; background: #eee5d9; color: #72563e; font-size: 11px; border-radius: 2px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 32px; border-top: 1px solid var(--line); padding-top: 23px; gap: 15px; }
+    .stat strong { display: block; font: 30px var(--serif); color: var(--brown); }
+    .stat span { font-size: 11px; color: var(--muted); }
+    .filters { display: flex; gap: 9px; flex-wrap: wrap; margin: -10px 0 25px; }
+    .filter { padding: 7px 15px; background: transparent; border: 1px solid var(--line); color: var(--muted); cursor: pointer; border-radius: 2px; font-size: 12px; }
+    .filter.active, .filter:hover { background: var(--brown); color: white; border-color: var(--brown); }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .work-card { background: var(--paper); border: 1px solid var(--line); transition: transform .25s, box-shadow .25s; }
+    .work-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .work-visual { height: 190px; display: grid; place-items: center; position: relative; overflow: hidden; background: linear-gradient(135deg, #e6d9c8, #cbb79e); color: #795c43; }
+    .work-card:nth-child(2) .work-visual { background: linear-gradient(135deg, #d7c8b5, #f0e8dc); }
+    .work-card:nth-child(3) .work-visual { background: linear-gradient(135deg, #c8b49b, #e8ded0); }
+    .work-visual:before, .work-visual:after { content: ''; position: absolute; border: 1px solid rgba(103,76,51,.22); border-radius: 50%; width: 190px; height: 190px; }
+    .work-visual:after { width: 130px; height: 130px; }
+    .work-symbol { z-index: 1; font: 55px var(--serif); }
+    .work-content { padding: 20px; }
+    .work-type { font-size: 10px; color: #9b7b5c; letter-spacing: .15em; text-transform: uppercase; }
+    .work-content h3 { margin: 5px 0 7px; font-size: 16px; font-weight: 500; }
+    .work-content p { margin: 0; color: var(--muted); font-size: 12px; min-height: 44px; }
+    .work-link { display: inline-block; margin-top: 15px; font-size: 11px; color: var(--brown); border-bottom: 1px solid #b99d7c; padding-bottom: 2px; }
+    .activity-list { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .activity { display: flex; gap: 18px; padding: 22px; border: 1px solid var(--line); background: #fffdfa; }
+    .activity-year { flex: 0 0 65px; font: 20px var(--serif); color: #9b7b5c; }
+    .activity h3 { margin: 0 0 5px; font-size: 15px; font-weight: 500; }
+    .activity p { margin: 0; color: var(--muted); font-size: 12px; }
+    .contact-panel { background: #453326; color: #f7f0e6; padding: 55px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 30px; align-items: center; position: relative; overflow: hidden; }
+    .contact-panel:after { content: '✳'; position: absolute; right: 7%; top: -55px; font: 230px var(--serif); color: rgba(255,255,255,.045); }
+    .contact-panel h2 { margin-top: 0; }
+    .contact-panel h2 span { color: #d7bd9c; }
+    .contact-panel p { color: #d1c1ae; font-size: 13px; max-width: 480px; }
+    .contact-details { z-index: 1; display: grid; gap: 13px; font-size: 13px; color: #eadfce; }
+    .contact-details a { border-bottom: 1px solid rgba(255,255,255,.2); padding-bottom: 7px; }
+    .contact-details b { color: #c7a984; font-weight: 400; margin-right: 8px; }
+    footer { text-align: center; padding: 23px; color: #8c7966; font-size: 10px; letter-spacing: .08em; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s, transform .6s; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; padding-top: 60px; gap: 25px; }
+      .hero-art { min-height: 350px; }
+      .portrait-frame { height: 350px; max-width: 320px; }
+      .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-panel { grid-template-columns: 1fr; padding: 38px 28px; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 12px 18px; }
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 18px 22px 22px; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 13px; }
+      .nav-links.open { display: flex; }
+      .nav-links .contact-link { text-align: center; }
+      .hero { padding: 48px 21px 55px; }
+      .hero-desc { font-size: 13px; }
+      .section { padding: 65px 21px; }
+      .portfolio-grid, .activity-list { grid-template-columns: 1fr; }
+      .profile-list { grid-template-columns: 1fr 1fr; gap: 0 14px; }
+      .stats { gap: 8px; }
+      .stat strong { font-size: 25px; }
+      .contact-panel { padding: 34px 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <div class="nav-wrap">
+    <nav aria-label="เมนูหลัก">
+      <a class="brand" href="#home">PORTFOLIO<small>PERSONAL COLLECTION</small></a>
+      <button class="menu-btn" id="menuBtn" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">หน้าแรก</a><a href="#about">แนะนำตัว</a><a href="#works">ผลงาน</a><a href="#activities">กิจกรรม</a><a class="contact-link" href="#contact">ติดต่อ</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="reveal">
+        <div class="eyebrow">E-PORTFOLIO · 2026</div>
+        <h1>แฟ้มสะสมผลงาน<span>Personal Portfolio</span></h1>
+        <p class="hero-desc">พื้นที่รวบรวมประวัติส่วนตัว ผลงานสร้างสรรค์ และกิจกรรมที่สนใจ ทั้งงานวาดภาพ งานปั้น และการทดลองทำสิ่งใหม่ ๆ เพื่อบันทึกการเรียนรู้และพัฒนาความสามารถของตัวเอง</p>
+        <div class="actions"><a class="btn primary" href="#works">ชมผลงาน <span>↗</span></a><a class="btn ghost" href="#about">รู้จักฉันเพิ่มเติม</a></div>
+      </div>
+      <div class="hero-art reveal">
+        <span class="side-note">A COLLECTION OF IDEAS & WORKS</span>
+        <div class="portrait-frame"><div class="portrait-inner"><div class="monogram">P.</div><div class="portrait-label">WICHHAYA THAWONPHON</div><div class="portrait-name">The Art of Creation</div></div></div>
+        <div class="seal">THOUGHTFUL<br>· CREATIVE ·<br>CURIOUS</div>
+      </div>
+    </section>
+
+    <section class="section white" id="about">
+      <div class="container">
+        <div class="section-head reveal"><div class="section-kicker">01 / ABOUT ME</div><h2>แนะนำตัว <span>About Me</span></h2><p class="section-intro">ทำความรู้จักเจ้าของแฟ้มสะสมผลงาน ผ่านประวัติ ความสนใจ และทักษะที่ได้พัฒนาจากการเรียนรู้และลงมือทำ</p></div>
+        <div class="about-grid">
+          <div class="about-card reveal"><h3>ยินดีที่ได้รู้จัก</h3><p>สวัสดีครับ ผมชื่อภูมิ เป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6 โรงเรียนธัญรัตน์ เป็นคนที่ชื่นชอบงานศิลปะและการสร้างสรรค์ผลงาน โดยเฉพาะการวาดรูปและการปั้น ผมสนุกกับการได้ลองใช้ไอเดียใหม่ ๆ ถ่ายทอดสิ่งที่คิดออกมาเป็นผลงานจริง และเรียนรู้จากการลงมือทำ แฟ้มสะสมผลงานนี้จึงเป็นพื้นที่รวบรวมสิ่งที่ผมสนใจและผลงานที่ได้สร้างขึ้น</p><div class="skills"><span class="skill">วาดภาพ</span><span class="skill">ปั้น / ประติมากรรม</span><span class="skill">งานประดิษฐ์</span><span class="skill">ความคิดสร้างสรรค์</span><span class="skill">การออกแบบ</span><span class="skill">HTML / CSS / JavaScript</span></div></div>
+          <div class="reveal"><div class="profile-list">
+            <div class="profile-item"><small>FULL NAME</small><strong>นายวิชญะ ถาวรผล</strong></div><div class="profile-item"><small>NICKNAME</small><strong>ภูมิ</strong></div>
+            <div class="profile-item"><small>SCHOOL</small><strong>โรงเรียนธัญรัตน์</strong></div><div class="profile-item"><small>EDUCATION</small><strong>มัธยมศึกษาปีที่ 6</strong></div>
+            <div class="profile-item"><small>INTEREST</small><strong>ศิลปะและงานสร้างสรรค์</strong></div><div class="profile-item"><small>SKILLS</small><strong>วาดภาพและปั้น</strong></div>
+          </div><div class="stats"><div class="stat"><strong>Art</strong><span>ความสนใจด้านศิลปะ</span></div><div class="stat"><strong>Make</strong><span>เรียนรู้ผ่านการลงมือทำ</span></div><div class="stat"><strong>∞</strong><span>ไอเดียใหม่ ๆ ที่อยากลอง</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-head reveal"><div class="section-kicker">02 / SELECTED WORKS</div><h2>ผลงาน <span>My Works</span></h2><p class="section-intro">พื้นที่สำหรับรวบรวมผลงานด้านศิลปะและงานสร้างสรรค์ สามารถเพิ่มภาพถ่ายผลงานจริงและรายละเอียดของแต่ละชิ้นได้</p></div>
+        <div class="filters reveal" role="group" aria-label="ตัวกรองผลงาน"><button class="filter active" data-filter="all">ทั้งหมด</button><button class="filter" data-filter="drawing">วาดภาพ</button><button class="filter" data-filter="sculpture">งานปั้น</button><button class="filter" data-filter="craft">งานสร้างสรรค์</button></div>
+        <div class="portfolio-grid">
+          <article class="work-card reveal" data-category="drawing"><div class="work-visual"><span class="work-symbol">✎</span></div><div class="work-content"><div class="work-type">DRAWING</div><h3>ผลงานวาดภาพ</h3><p>รวบรวมภาพวาดที่ถ่ายทอดจินตนาการ ความคิด และสไตล์การสร้างสรรค์ของผู้จัดทำ</p><a class="work-link" href="https://github.com/Hades030400" target="_blank" rel="noopener">เยี่ยมชม GitHub ↗</a></div></article>
+          <article class="work-card reveal" data-category="sculpture"><div class="work-visual"><span class="work-symbol">◈</span></div><div class="work-content"><div class="work-type">SCULPTURE</div><h3>ผลงานปั้น</h3><p>นำเสนอผลงานสามมิติที่เกิดจากการขึ้นรูปวัสดุและการทดลองสร้างรูปทรงต่าง ๆ</p><a class="work-link" href="https://github.com/Hades030400" target="_blank" rel="noopener">เยี่ยมชม GitHub ↗</a></div></article>
+          <article class="work-card reveal" data-category="craft"><div class="work-visual"><span class="work-symbol">✳</span></div><div class="work-content"><div class="work-type">CREATIVE WORK</div><h3>งานประดิษฐ์และออกแบบ</h3><p>พื้นที่แสดงผลงานทดลองทำสิ่งต่าง ๆ ด้วยวัสดุและแนวคิดที่หลากหลาย</p><a class="work-link" href="https://github.com/Hades030400" target="_blank" rel="noopener">เยี่ยมชม GitHub ↗</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="activities">
+      <div class="container">
+        <div class="section-head reveal"><div class="section-kicker">03 / EXPERIENCES</div><h2>กิจกรรมและประสบการณ์ <span>Activities</span></h2><p class="section-intro">บันทึกประสบการณ์การเรียนรู้และการฝึกฝนทักษะด้านศิลปะ สามารถเพิ่มเติมกิจกรรมของโรงเรียนหรือเกียรติบัตรได้ภายหลัง</p></div>
+        <div class="activity-list">
+          <article class="activity reveal"><div class="activity-year">01</div><div><h3>ฝึกฝนทักษะการวาดภาพ</h3><p>ทดลองใช้เส้น รูปร่าง แสงและเงา เพื่อถ่ายทอดความคิดออกมาเป็นภาพ</p></div></article>
+          <article class="activity reveal"><div class="activity-year">02</div><div><h3>เรียนรู้การปั้นและสร้างรูปทรง</h3><p>ฝึกขึ้นรูปวัสดุและพัฒนาความเข้าใจเกี่ยวกับรูปทรงสามมิติ</p></div></article>
+          <article class="activity reveal"><div class="activity-year">03</div><div><h3>ทดลองสร้างสรรค์งานจากวัสดุต่าง ๆ</h3><p>ฝึกแก้ปัญหาเฉพาะหน้าและเลือกใช้วัสดุให้เหมาะกับแนวคิดของผลงาน</p></div></article>
+          <article class="activity reveal"><div class="activity-year">04</div><div><h3>เรียนรู้การทำเว็บไซต์เบื้องต้น</h3><p>ทำความรู้จัก HTML, CSS และ JavaScript ผ่านการสร้างเว็บไซต์ E-Portfolio</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container"><div class="contact-panel reveal"><div><div class="section-kicker" style="color:#c7a984">04 / GET IN TOUCH</div><h2>มาพูดคุยกัน <span>Contact</span></h2><p>ขอบคุณที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงาน สามารถติดตามโปรไฟล์ GitHub เพื่อดูงานและโปรเจกต์ที่เผยแพร่ไว้ได้</p></div><div class="contact-details"><a href="https://github.com/Hades030400" target="_blank" rel="noopener"><b>GITHUB</b> github.com/Hades030400</a><a href="#home"><b>BACK TO TOP</b> กลับสู่ด้านบน ↑</a></div></div></div>
+    </section>
+  </main>
+  <footer>© 2026 WICHHAYA THAWONPHON · PERSONAL PORTFOLIO</footer>
+
+  <script>
+    // เมนูสำหรับหน้าจอมือถือ
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const opened = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(opened));
+      menuBtn.textContent = opened ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+
+    // ตัวกรองหมวดหมู่ผลงาน
+    const filterButtons = document.querySelectorAll('.filter');
+    const workCards = document.querySelectorAll('.work-card');
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      filterButtons.forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      const filter = button.dataset.filter;
+      workCards.forEach(card => {
+        card.hidden = filter !== 'all' && card.dataset.category !== filter;
+      });
+    }));
+
+    // แสดงเนื้อหาเมื่อเลื่อนมาถึง
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
